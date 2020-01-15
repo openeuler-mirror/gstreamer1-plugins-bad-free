@@ -3,7 +3,7 @@
 
 Name:           gstreamer1-plugins-bad-free
 Version:        1.14.4
-Release:        2
+Release:        3
 Summary:        Not well tested plugins for GStreamer framework
 License:        LGPLv2+ and LGPLv2
 URL:            http://gstreamer.freedesktop.org/
@@ -14,13 +14,13 @@ BuildRequires:  gstreamer1-devel >= %{version}
 BuildRequires:  gstreamer1-plugins-base-devel >= %{version}
 BuildRequires:  check gettext-devel libXt-devel gtk-doc
 BuildRequires:  gobject-introspection-devel >= 1.31.1
-BuildRequires:  bzip2-devel exempi-devel gsm-devel jasper-devel ladspa-devel
-BuildRequires:  lcms2-devel libdvdnav-devel libexif-devel libiptcdata-devel
-BuildRequires:  libmpcdec-devel libnice-devel librsvg2-devel libsndfile-devel
+BuildRequires:  bzip2-devel exempi-devel gsm-devel jasper-devel
+BuildRequires:  lcms2-devel libexif-devel libiptcdata-devel
+BuildRequires:  libnice-devel librsvg2-devel libsndfile-devel
 BuildRequires:  mesa-libGL-devel mesa-libGLES-devel mesa-libGLU-devel
-BuildRequires:  openssl-devel orc-devel soundtouch-devel wavpack-devel
-BuildRequires:  opus-devel nettle-devel libgcrypt-devel libwayland-client-devel
-BuildRequires:  gnutls-devel libsrtp-devel pkgconfig(gudev-1.0) pkgconfig(libusb-1.0)
+BuildRequires:  openssl-devel orc-devel libwayland-client-devel 
+BuildRequires:  opus-devel nettle-devel libgcrypt-devel
+BuildRequires:  gnutls-devel pkgconfig(gudev-1.0) pkgconfig(libusb-1.0)
 BuildRequires:  gtk3-devel >= 3.4 bluez-libs-devel >= 5.0 libwebp-devel
 BuildRequires:  mesa-libEGL-devel webrtc-audio-processing-devel
 
@@ -192,7 +192,6 @@ EOF
 %{_libdir}/gstreamer-%{majorminor}/libgstpnm.so
 %{_libdir}/gstreamer-%{majorminor}/libgstproxy.so
 %{_libdir}/gstreamer-%{majorminor}/libgstremovesilence.so
-%{_libdir}/gstreamer-%{majorminor}/libgstresindvd.so
 %{_libdir}/gstreamer-%{majorminor}/libgstrfbsrc.so
 %{_libdir}/gstreamer-%{majorminor}/libgstrsvg.so
 %{_libdir}/gstreamer-%{majorminor}/libgstrtponvif.so
@@ -219,13 +218,9 @@ EOF
 %{_libdir}/gstreamer-%{majorminor}/libgsthls.so
 %{_libdir}/gstreamer-%{majorminor}/libgstgsm.so
 %{_libdir}/gstreamer-%{majorminor}/libgstkms.so
-%{_libdir}/gstreamer-%{majorminor}/libgstladspa.so
-%{_libdir}/gstreamer-%{majorminor}/libgstmusepack.so
 %{_libdir}/gstreamer-%{majorminor}/libgstopenglmixers.so
 %{_libdir}/gstreamer-%{majorminor}/libgstopusparse.so
 %{_libdir}/gstreamer-%{majorminor}/libgstsndfile.so
-%{_libdir}/gstreamer-%{majorminor}/libgstsoundtouch.so
-%{_libdir}/gstreamer-%{majorminor}/libgstsrtp.so
 %{_libdir}/gstreamer-%{majorminor}/libgstttmlsubs.so
 %{_libdir}/gstreamer-%{majorminor}/libgstwaylandsink.so
 %{_libdir}/gstreamer-%{majorminor}/libgstwebp.so
@@ -264,5 +259,11 @@ EOF
 %{_includedir}/gstreamer-%{majorminor}/gst/*
 
 %changelog
+* Wed Jan 15 2020 openEuler Buildteam <buildteam@openeuler.org> - 1.14.4-3
+- Type:enhancement
+- Id:NA
+- SUG:NA
+- DESC:optimization the spec
+
 * Tue Oct 22 2019 Alex Chao <zhaolei746@huawei.com> - 1.14.4-2
 - Package init
