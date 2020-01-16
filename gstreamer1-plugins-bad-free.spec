@@ -3,12 +3,11 @@
 
 Name:           gstreamer1-plugins-bad-free
 Version:        1.14.4
-Release:        3
+Release:        4
 Summary:        Not well tested plugins for GStreamer framework
 License:        LGPLv2+ and LGPLv2
 URL:            http://gstreamer.freedesktop.org/
-Source0:        gst-plugins-bad-free-%{version}.tar.xz
-Source1:        gst-p-bad-cleanup.sh
+Source0:        https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-%{version}.tar.xz
 
 BuildRequires:  gstreamer1-devel >= %{version}
 BuildRequires:  gstreamer1-plugins-base-devel >= %{version}
@@ -227,6 +226,9 @@ EOF
 %{_libdir}/gstreamer-%{majorminor}/libgstwebrtc.so
 %{_libdir}/gstreamer-%{majorminor}/libgstwebrtcdsp.so
 %{_libdir}/gstreamer-%{majorminor}/libgstdebugutilsbad.so
+%{_libdir}/gstreamer-%{majorminor}/libgstdvbsuboverlay.so
+%{_libdir}/gstreamer-%{majorminor}/libgstdvdspu.so
+%{_libdir}/gstreamer-%{majorminor}/libgstsiren.so
 
 %if %{with extras}
 %files extras
@@ -259,6 +261,9 @@ EOF
 %{_includedir}/gstreamer-%{majorminor}/gst/*
 
 %changelog
+* Thu Jan 16 2020 zhujunhao <zhujunhao5@huawei.com> - 1.14.4-4
+- Modify url and remove useless file
+
 * Wed Jan 15 2020 openEuler Buildteam <buildteam@openeuler.org> - 1.14.4-3
 - Type:enhancement
 - Id:NA
