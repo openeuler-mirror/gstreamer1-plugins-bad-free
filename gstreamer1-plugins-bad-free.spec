@@ -3,7 +3,7 @@
 
 Name:           gstreamer1-plugins-bad-free
 Version:        1.14.4
-Release:        4
+Release:        5
 Summary:        Not well tested plugins for GStreamer framework
 License:        LGPLv2+ and LGPLv2
 URL:            http://gstreamer.freedesktop.org/
@@ -13,7 +13,7 @@ BuildRequires:  gstreamer1-devel >= %{version}
 BuildRequires:  gstreamer1-plugins-base-devel >= %{version}
 BuildRequires:  check gettext-devel libXt-devel gtk-doc
 BuildRequires:  gobject-introspection-devel >= 1.31.1
-BuildRequires:  bzip2-devel exempi-devel gsm-devel jasper-devel
+BuildRequires:  bzip2-devel exempi-devel gsm-devel 
 BuildRequires:  lcms2-devel libexif-devel libiptcdata-devel
 BuildRequires:  libnice-devel librsvg2-devel libsndfile-devel
 BuildRequires:  mesa-libGL-devel mesa-libGLES-devel mesa-libGLU-devel
@@ -261,6 +261,12 @@ EOF
 %{_includedir}/gstreamer-%{majorminor}/gst/*
 
 %changelog
+* Thu Jan 23 2020 openEuler Buildteam <buildteam@openeuler.org> - 1.14.4-5
+- Type:bugfix
+- Id:NA
+- SUG:NA
+- DESC:delete the jasper
+
 * Thu Jan 16 2020 zhujunhao <zhujunhao5@huawei.com> - 1.14.4-4
 - Modify url and remove useless file
 
