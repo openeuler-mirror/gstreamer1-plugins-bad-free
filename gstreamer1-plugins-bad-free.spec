@@ -9,7 +9,7 @@ License:        LGPLv2+ and LGPLv2
 URL:            http://gstreamer.freedesktop.org/
 Source0:        https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-%{version}.tar.xz
 
-BuildRequires:  gstreamer1-devel >= %{version}
+BuildRequires:  gstreamer1-devel >= %{version} gdb
 BuildRequires:  gstreamer1-plugins-base-devel >= %{version}
 BuildRequires:  check gettext-devel libXt-devel gtk-doc
 BuildRequires:  gobject-introspection-devel >= 1.31.1
