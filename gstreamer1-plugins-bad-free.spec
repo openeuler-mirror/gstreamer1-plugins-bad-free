@@ -266,10 +266,7 @@ EOF
 
 %changelog
 * Tue May 19 2020 openEuler Buildteam <buildteam@openeuler.org> - 1.14.4-7
-- Type:bugfix
-- Id:NA
-- SUG:NA
-- DESC:rebuild for libwebp-1.1.0
+- rebuild for libwebp-1.1.0
 
 * Sat Mar 21 2020 songnannan <songnannan2@huawei.com> - 1.14.4-6
 - bugfix the unpackage file
