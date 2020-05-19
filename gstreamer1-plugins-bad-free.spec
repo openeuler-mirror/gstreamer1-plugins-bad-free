@@ -3,7 +3,7 @@
 
 Name:           gstreamer1-plugins-bad-free
 Version:        1.14.4
-Release:        6
+Release:        7
 Summary:        Not well tested plugins for GStreamer framework
 License:        LGPLv2+ and LGPLv2
 URL:            http://gstreamer.freedesktop.org/
@@ -265,6 +265,12 @@ EOF
 %{_includedir}/gstreamer-%{majorminor}/gst/*
 
 %changelog
+* Tue May 19 2020 openEuler Buildteam <buildteam@openeuler.org> - 1.14.4-7
+- Type:bugfix
+- Id:NA
+- SUG:NA
+- DESC:rebuild for libwebp-1.1.0
+
 * Sat Mar 21 2020 songnannan <songnannan2@huawei.com> - 1.14.4-6
 - bugfix the unpackage file
 
