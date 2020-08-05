@@ -3,7 +3,7 @@
 
 Name:           gstreamer1-plugins-bad-free
 Version:        1.14.4
-Release:        7
+Release:        8
 Summary:        Not well tested plugins for GStreamer framework
 License:        LGPLv2+ and LGPLv2
 URL:            http://gstreamer.freedesktop.org/
@@ -18,7 +18,7 @@ BuildRequires:  gobject-introspection-devel >= 1.31.1
 BuildRequires:  bzip2-devel exempi-devel gsm-devel 
 BuildRequires:  lcms2-devel libexif-devel libiptcdata-devel
 BuildRequires:  libnice-devel librsvg2-devel libsndfile-devel
-BuildRequires:  mesa-libGL-devel mesa-libGLES-devel mesa-libGLU-devel
+BuildRequires:  mesa-libGL-devel libglvnd-devel mesa-libGLU-devel
 BuildRequires:  openssl-devel orc-devel libwayland-client-devel 
 BuildRequires:  opus-devel nettle-devel libgcrypt-devel
 BuildRequires:  gnutls-devel pkgconfig(gudev-1.0) pkgconfig(libusb-1.0)
@@ -268,6 +268,9 @@ EOF
 %{_includedir}/gstreamer-%{majorminor}/gst/*
 
 %changelog
+* Wed Aug 05 2020 hanhui <hanhui15@huawei.com> - 1.14.4-8
+- change the mesa-libELGS-devel to libglvnd-devel
+
 * Mon Aug 03 2020 lingsheng <lingsheng@huawei.com> - 1.14.4-7
 - Fix build fail with make 4.3
 
