@@ -2,8 +2,8 @@
 %bcond_with extras
 
 Name:           gstreamer1-plugins-bad-free
-Version:        1.14.4
-Release:        8
+Version:        1.16.2
+Release:        1
 Summary:        Not well tested plugins for GStreamer framework
 License:        LGPLv2+ and LGPLv2
 URL:            http://gstreamer.freedesktop.org/
@@ -163,7 +163,6 @@ EOF
 %{_libdir}/gstreamer-%{majorminor}/libgstbayer.so
 %{_libdir}/gstreamer-%{majorminor}/libgstcamerabin.so
 %{_libdir}/gstreamer-%{majorminor}/libgstcoloreffects.so
-%{_libdir}/gstreamer-%{majorminor}/libgstcompositor.so
 %{_libdir}/gstreamer-%{majorminor}/libgstdashdemux.so
 %{_libdir}/gstreamer-%{majorminor}/libgstfaceoverlay.so
 %if %{with extras}
@@ -203,7 +202,6 @@ EOF
 %{_libdir}/gstreamer-%{majorminor}/libgstsmooth.so
 %{_libdir}/gstreamer-%{majorminor}/libgstsmoothstreaming.so
 %{_libdir}/gstreamer-%{majorminor}/libgstspeed.so
-%{_libdir}/gstreamer-%{majorminor}/libgststereo.so
 %{_libdir}/gstreamer-%{majorminor}/libgstsubenc.so
 %{_libdir}/gstreamer-%{majorminor}/libgsttimecode.so
 %{_libdir}/gstreamer-%{majorminor}/libgstuvch264.so
@@ -212,7 +210,6 @@ EOF
 %{_libdir}/gstreamer-%{majorminor}/libgstyadif.so
 %{_libdir}/gstreamer-%{majorminor}/libgsty4mdec.so
 %{_libdir}/gstreamer-%{majorminor}/libgstdvb.so
-%{_libdir}/gstreamer-%{majorminor}/libgstvcdsrc.so
 %{_libdir}/gstreamer-%{majorminor}/libgstbluez.so
 %{_libdir}/gstreamer-%{majorminor}/libgstbz2.so
 %{_libdir}/gstreamer-%{majorminor}/libgstcolormanagement.so
@@ -220,7 +217,6 @@ EOF
 %{_libdir}/gstreamer-%{majorminor}/libgsthls.so
 %{_libdir}/gstreamer-%{majorminor}/libgstgsm.so
 %{_libdir}/gstreamer-%{majorminor}/libgstkms.so
-%{_libdir}/gstreamer-%{majorminor}/libgstopenglmixers.so
 %{_libdir}/gstreamer-%{majorminor}/libgstopusparse.so
 %{_libdir}/gstreamer-%{majorminor}/libgstsndfile.so
 %{_libdir}/gstreamer-%{majorminor}/libgstttmlsubs.so
@@ -232,9 +228,7 @@ EOF
 %{_libdir}/gstreamer-%{majorminor}/libgstdvbsuboverlay.so
 %{_libdir}/gstreamer-%{majorminor}/libgstdvdspu.so
 %{_libdir}/gstreamer-%{majorminor}/libgstsiren.so
-%if ! %{with extras}
-%exclude %{_libdir}/gstreamer-%{majorminor}/libgstcurl.so
-%endif
+%{_libdir}/gstreamer-%{majorminor}/libgstclosedcaption.so
 
 
 %if %{with extras}
@@ -268,6 +262,9 @@ EOF
 %{_includedir}/gstreamer-%{majorminor}/gst/*
 
 %changelog
+* Thu Aug 06 2020 hanhui <hanhui15@huawei.com> - 1.16.2-1
+- update to 1.16.2
+
 * Wed Aug 05 2020 hanhui <hanhui15@huawei.com> - 1.14.4-8
 - change the mesa-libELGS-devel to libglvnd-devel
 
