@@ -3,13 +3,15 @@
 
 Name:           gstreamer1-plugins-bad-free
 Version:        1.14.4
-Release:        7
+Release:        8
 Summary:        Not well tested plugins for GStreamer framework
 License:        LGPLv2+ and LGPLv2
 URL:            http://gstreamer.freedesktop.org/
 Source0:        https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-%{version}.tar.xz
 
-BuildRequires:  gstreamer1-devel >= %{version} gdb
+Patch0001:      Adapt-to-backwards-incompatible-change-in-GNU-Make-4.3.patch
+
+BuildRequires:  gstreamer1-devel >= %{version} gdb autoconf
 BuildRequires:  gstreamer1-plugins-base-devel >= %{version}
 BuildRequires:  check gettext-devel libXt-devel gtk-doc
 BuildRequires:  gobject-introspection-devel >= 1.31.1
@@ -75,9 +77,10 @@ Requires:       gstreamer1-plugins-base-devel
 This package provides the development files for GStreamer not-well-tested plugins.
 
 %prep
-%autosetup -n gst-plugins-bad-%{version}
+%autosetup -n gst-plugins-bad-%{version} -p1
 
 %build
+autoreconf --force --install
 %configure --disable-silent-rules --disable-fatal-warnings \
     --with-package-name="openEuler GStreamer-plugins-bad package" \
     --with-package-origin="https://openeuler.org/en/building/download.html" \
@@ -265,6 +268,9 @@ EOF
 %{_includedir}/gstreamer-%{majorminor}/gst/*
 
 %changelog
+* Tue Aug 18 2020 lingsheng <lingsheng@huawei.com> - 1.14.4-8
+- Fix build fail with make 4.3
+
 * Tue May 19 2020 openEuler Buildteam <buildteam@openeuler.org> - 1.14.4-7
 - rebuild for libwebp-1.1.0
 
