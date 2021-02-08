@@ -3,13 +3,14 @@
 
 Name:           gstreamer1-plugins-bad-free
 Version:        1.16.2
-Release:        1
+Release:        2
 Summary:        Not well tested plugins for GStreamer framework
 License:        LGPLv2+ and LGPLv2
 URL:            http://gstreamer.freedesktop.org/
 Source0:        https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-%{version}.tar.xz
 
 Patch0001:      Adapt-to-backwards-incompatible-change-in-GNU-Make-4.3.patch
+Patch0002:      CVE-2021-3185.patch
 
 BuildRequires:  gstreamer1-devel >= %{version} gdb autoconf
 BuildRequires:  gstreamer1-plugins-base-devel >= %{version}
@@ -262,6 +263,9 @@ EOF
 %{_includedir}/gstreamer-%{majorminor}/gst/*
 
 %changelog
+* Mon Feb 08 2021 openEuler Buildteam <buildteam@openeuler.org> - 1.16.2-2
+- fix CVE-2021-3185
+
 * Wed Aug 19 2020 jinzhimin <jinzhimin2@huawei.com> - 1.16.2-1
 - update to 1.16.2
 
