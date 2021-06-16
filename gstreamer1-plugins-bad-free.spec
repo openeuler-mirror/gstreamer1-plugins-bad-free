@@ -3,7 +3,7 @@
 
 Name:           gstreamer1-plugins-bad-free
 Version:        1.16.2
-Release:        2
+Release:        3
 Summary:        Not well tested plugins for GStreamer framework
 License:        LGPLv2+ and LGPLv2
 URL:            http://gstreamer.freedesktop.org/
@@ -24,7 +24,7 @@ BuildRequires:  openssl-devel orc-devel libwayland-client-devel
 BuildRequires:  opus-devel nettle-devel libgcrypt-devel
 BuildRequires:  gnutls-devel pkgconfig(gudev-1.0) pkgconfig(libusb-1.0)
 BuildRequires:  gtk3-devel >= 3.4 bluez-libs-devel >= 5.0 libwebp-devel
-BuildRequires:  mesa-libEGL-devel webrtc-audio-processing-devel
+BuildRequires:  mesa-libEGL-devel webrtc-audio-processing-devel gcc-g++
 
 %if %{with extras}
 BuildRequires:  libbs2b-devel >= 3.1.0 fluidsynth-devel libass-devel
@@ -263,6 +263,10 @@ EOF
 %{_includedir}/gstreamer-%{majorminor}/gst/*
 
 %changelog
+* Tue Jun 15 2021 baizhonggui <baizhonggui@huawei.com> - 1.16.2-3
+- Fix building error: File not found: /home/abuild/rpmbuild/BUILDROOT/gstreamer1-plugins-bad-free-1.16.2-2.oe1.aarch64/usr/lib64/gstreamer-1.0/libgstwebrtcdsp.so
+- Add gcc-g++ in BuildRequires
+
 * Mon Feb 08 2021 openEuler Buildteam <buildteam@openeuler.org> - 1.16.2-2
 - fix CVE-2021-3185
 
