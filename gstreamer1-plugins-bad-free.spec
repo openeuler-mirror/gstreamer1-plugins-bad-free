@@ -3,7 +3,7 @@
 
 Name:           gstreamer1-plugins-bad-free
 Version:        1.16.2
-Release:        3
+Release:        4
 Summary:        Not well tested plugins for GStreamer framework
 License:        LGPLv2+ and LGPLv2
 URL:            http://gstreamer.freedesktop.org/
@@ -12,7 +12,7 @@ Source0:        https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugin
 Patch0001:      Adapt-to-backwards-incompatible-change-in-GNU-Make-4.3.patch
 Patch0002:      CVE-2021-3185.patch
 
-BuildRequires:  gstreamer1-devel >= %{version} gdb autoconf
+BuildRequires:  gstreamer1-devel >= %{version} autoconf
 BuildRequires:  gstreamer1-plugins-base-devel >= %{version}
 BuildRequires:  check gettext-devel libXt-devel gtk-doc
 BuildRequires:  gobject-introspection-devel >= 1.31.1
@@ -263,6 +263,9 @@ EOF
 %{_includedir}/gstreamer-%{majorminor}/gst/*
 
 %changelog
+* Thu 22 Jul 2021 sunguoshuai <sunguoshuai@huawei.com> - 1.16.2-4
+- Del useless buildrequire gdb
+
 * Tue Jun 15 2021 baizhonggui <baizhonggui@huawei.com> - 1.16.2-3
 - Fix building error: File not found: /home/abuild/rpmbuild/BUILDROOT/gstreamer1-plugins-bad-free-1.16.2-2.oe1.aarch64/usr/lib64/gstreamer-1.0/libgstwebrtcdsp.so
 - Add gcc-g++ in BuildRequires
