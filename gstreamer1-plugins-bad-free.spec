@@ -3,7 +3,7 @@
 
 Name:           gstreamer1-plugins-bad-free
 Version:        1.16.2
-Release:        4
+Release:        5
 Summary:        Not well tested plugins for GStreamer framework
 License:        LGPLv2+ and LGPLv2
 URL:            http://gstreamer.freedesktop.org/
@@ -224,7 +224,6 @@ EOF
 %{_libdir}/gstreamer-%{majorminor}/libgstwaylandsink.so
 %{_libdir}/gstreamer-%{majorminor}/libgstwebp.so
 %{_libdir}/gstreamer-%{majorminor}/libgstwebrtc.so
-%{_libdir}/gstreamer-%{majorminor}/libgstwebrtcdsp.so
 %{_libdir}/gstreamer-%{majorminor}/libgstdebugutilsbad.so
 %{_libdir}/gstreamer-%{majorminor}/libgstdvbsuboverlay.so
 %{_libdir}/gstreamer-%{majorminor}/libgstdvdspu.so
@@ -263,7 +262,10 @@ EOF
 %{_includedir}/gstreamer-%{majorminor}/gst/*
 
 %changelog
-* Thu 22 Jul 2021 sunguoshuai <sunguoshuai@huawei.com> - 1.16.2-4
+* Fri Jan 14 2022 pei-jiankang<peijiankang@kylinos.com> - 1.16.2-5
+- modify complie error
+
+* Thu Jul 22 2021 sunguoshuai <sunguoshuai@huawei.com> - 1.16.2-4
 - Del useless buildrequire gdb
 
 * Tue Jun 15 2021 baizhonggui <baizhonggui@huawei.com> - 1.16.2-3
